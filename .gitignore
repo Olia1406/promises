@@ -1,0 +1,70 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+/.gradle
+/reports
+build
+build/times.csv
+/.cache
+/caches
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.history
+*.iml
+
+# IDE - VSCode
+.vscode/*
+.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.angular/cache
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+projects/profilesmanager-app/src/assets/data/buildInfo.json
+projects/profilesmanager-app/src/environments/version.ts
+sonarlint.json
+sonar_prop_out.properties
+jenkinsjobid
+sh_*.txt
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+env_local.json
+specs/env_local.json
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# specs
+testah.log
+results
+
+local-ssl/
+
+# image specs
+__diff_output__
+
+envir_local.properties
