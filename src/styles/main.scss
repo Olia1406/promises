@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(247, 252, 255);
+}
+
+h1 {
+    color: deeppink;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap:20px;
+    width: calc(100% - 4vh);
+    min-height: 96vh;
+    margin: 2vh auto;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0px 1px 3px 1px gray;
+    padding: 20px;
+
+    #structure-json {
+        width: 400px;
+        height: 40px;
+        border: 1px solid darkblue;
+    }
+}

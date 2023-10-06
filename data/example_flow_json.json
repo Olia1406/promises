@@ -1,0 +1,36 @@
+{
+  "flowNodes": [
+    [
+      {
+        "function": "parseValueFromJson",
+        "parameters": {
+          "jsonPath": "./data/data1.json",
+          "valueName": "valueA"
+        },
+        "returnName": "valueA"
+      },
+      {
+        "function": "parseValueFromJson",
+        "parameters": {
+          "jsonPath": "./data/data2.json",
+          "valueName": "valueB"
+        },
+        "returnName": "valueB"
+      }
+    ],
+    {
+      "function": "sum",
+      "parameters": {
+        "x": "<valueA>",
+        "y": "<valueB>"
+      },
+      "returnName": "sum"
+    },
+    {
+      "function": "print",
+      "parameters": {
+        "value": "<sum>"
+      }
+    }
+  ]
+}

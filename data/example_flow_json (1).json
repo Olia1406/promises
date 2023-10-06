@@ -1,0 +1,43 @@
+{
+  "flowNodes": [
+    [
+      {
+        "function": "parseValueFromJson",
+        "parameters": {
+          "jsonPath": "<inputDate>.json1",
+          "valueName": "valueA"
+        },
+        "returnName": "valueA"
+      },
+      {
+        "function": "parseValueFromJson",
+        "parameters": {
+          "jsonPath": "<inputDate>.json2",
+          "valueName": "valueB"
+        },
+        "returnName": "valueB"
+      }
+    ],
+    {
+      "function": "sum",
+      "parameters": {
+        "valueA": "<valueA>",
+        "valueB": "<valueB>"
+      },
+      "returnName": "sum"
+    },
+    {
+      "function": "print",
+      "parameters": {
+        "value": "<sum>"
+      }
+    }
+  ]
+}
+
+//Програма має брати інпутом JSON з такою структурою, як вище, і будувати процес з нього
+//кожна функція має бути асинхронною (через проміси)
+//ноди виконуються послідовно
+//якщо вони в масиві, то виконуються паралельно і процес іде далі, коли всі з масиву виконаються і запишуть значення в контекст
+//кентекст - це об'єкт, в якому зберігаються значення, які попадають в наступну функцію
+//він є глобальним, тобто значення постійно додаються до нього, або перезаписуються, якщо мають однакові назви
