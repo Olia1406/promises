@@ -9,6 +9,16 @@
         },
         "returnName": "valueA"
       },
+      [
+        {
+          "function": "multiplicate",
+          "parameters": {
+            "val": "<valueA>",
+            "multiplier": "100"
+          },
+          "returnName": "valueA"
+        }
+      ],
       {
         "function": "parseValueFromJson",
         "parameters": {
