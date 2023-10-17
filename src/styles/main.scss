@@ -17,7 +17,7 @@ h1 {
     justify-content: space-between;
     gap:20px;
     width: calc(100% - 4vh);
-    min-height: 96vh;
+    min-height: 45vh;
     margin: 2vh auto;
     background-color: white;
     border-radius: 6px;
@@ -27,6 +27,7 @@ h1 {
     #structure-json {
         width: 400px;
         height: 40px;
+        padding: 8px;
         border: 1px solid darkblue;
     }
 }

@@ -40,7 +40,8 @@
       "function": "print",
       "parameters": {
         "value": "<sum>"
-      }
+      },
+      "returnName": "result"
     }
   ]
 }

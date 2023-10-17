@@ -1,20 +1,30 @@
-// export default function display(id, result) {
-//   document.getElementById(id).innerHTML = `Result ${result}`
-// }
-export default function display(id, result) {
-  return new Promise((resolve) => {
-    console.log('6', result)
-    document.getElementById(id).textContent = `${JSON.stringify(result, undefined, 2) }`
-    resolve(result)
-  })
-}
-export function delay(t) {
-  return new Promise(resolve => setTimeout(resolve, t));
-}
-
 export function recordToState(state, returnName, result) {
   return new Promise((resolve) => {
     state[returnName] = result;
+    resolve(result);
+  })
+}
+
+export function delay(t, val) {
+  return new Promise(resolve => {
+    return setTimeout(resolve, t, val)
+  });
+}
+
+export function print(result) {
+  return new Promise((resolve) => {
+    document.getElementById(elementId).textContent = `${JSON.stringify(result, undefined, 2)}`
     resolve(result)
   })
+}
+
+const elementId = 'result-displayer';
+
+const getAllValues = () => {
+    let arr = structure.flowNodes[0].map((node, i) => {
+        const path = node.parameters.jsonPath;
+        const value = node.parameters.valueName;
+        return parseValueFromJson(path, value)
+    })
+    return Promise.all(arr)
 }
