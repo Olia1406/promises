@@ -11,10 +11,10 @@ export function delay(t, val) {
   });
 }
 
-export function print(result) {
+export function print(params) {
   return new Promise((resolve) => {
-    document.getElementById(elementId).textContent = `${JSON.stringify(result, undefined, 2)}`
-    resolve(result)
+    document.getElementById(elementId).textContent = `${JSON.stringify(params.value, undefined, 2)}`
+    resolve(params.value)
   })
 }
 

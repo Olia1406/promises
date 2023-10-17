@@ -1,13 +1,13 @@
-export function sum(...args) {
+export function sum(params) {
     return new Promise((res, rej) => {
-        res(args.reduce((acc, curr) => acc + curr, 0));
+        res(params.x + params.y);
         rej(0)
     })
 }
 
-export function multiplicate(...args) {
+export function multiplicate(params) {
     return new Promise((res, rej) => {
-        res(args[0] * args[1]);
+        res(params.val * params.multiplier);
         rej(0)
     })
 }

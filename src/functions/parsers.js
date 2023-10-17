@@ -1,5 +1,5 @@
-export function parseValueFromJson(...args) {
-    return fetch(args[0])
+export function parseValueFromJson(params) {
+    return fetch(params.jsonPath)
         .then((response) => {
             if (!response.ok) {
                 throw new Error("Parser error " + response.status);
@@ -8,7 +8,7 @@ export function parseValueFromJson(...args) {
         })
         .then((json) => {
             return new Promise((resolve) => {
-                resolve(json[args[1]])
+                resolve(json[params.valueName])
             })
         });
 }
